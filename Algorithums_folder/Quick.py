@@ -1,4 +1,7 @@
+import time
+
 def quick_sort_with_steps(arr):
+    time_start = time.time()
     steps = []
     arr = arr.copy()
     
@@ -31,4 +34,5 @@ def quick_sort_with_steps(arr):
     if len(arr) > 1:
         quick_sort_helper(0, len(arr) - 1)
     
-    return arr, steps
+    time_end = time.time()
+    return arr, steps, time_end - time_start
