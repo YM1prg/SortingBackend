@@ -1,4 +1,7 @@
+import time
+
 def selection_sort_with_steps(arr):
+    time_start = time.time()
     steps = []
     arr = arr.copy()
     n = len(arr)
@@ -14,4 +17,5 @@ def selection_sort_with_steps(arr):
             steps.append({"i": i, "j": min_idx})
             arr[i], arr[min_idx] = arr[min_idx], arr[i]
     
-    return arr, steps
+    time_end = time.time()
+    return arr, steps, time_end - time_start
