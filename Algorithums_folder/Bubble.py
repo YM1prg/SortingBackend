@@ -1,4 +1,7 @@
+
+import time
 def bubble_sort_with_steps(arr):
+    time_start = time.time()
     steps = []
     arr = arr.copy()
     n = len(arr)
@@ -13,5 +16,5 @@ def bubble_sort_with_steps(arr):
         
         if not swapped:
             break
-    
-    return arr, steps
+    time_end = time.time()
+    return arr, steps, time_end - time_start
