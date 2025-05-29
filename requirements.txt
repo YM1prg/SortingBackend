@@ -5,3 +5,4 @@ Jinja2==3.1.4
 click==8.1.7
 flask-cors==5.0.1    # Optional, if you use CORS
 python-dotenv==1.0.1 # Optional, if you use .env files
+gunicorn==21.2.0
