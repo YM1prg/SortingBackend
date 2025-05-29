@@ -1,4 +1,7 @@
+import time
+
 def insertion_sort_with_steps(arr):
+    time_start = time.time()
     steps = []
     arr = arr.copy()
     
@@ -19,4 +22,5 @@ def insertion_sort_with_steps(arr):
             
             arr[insert_position] = key
     
-    return arr, steps
+    time_end = time.time()
+    return arr, steps, time_end - time_start
